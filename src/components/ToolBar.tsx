@@ -1,4 +1,4 @@
-import classNames from "classnames";
+import clsx from "clsx";
 import { MdArrowDropDown, MdCheck } from "react-icons/md";
 import { useEditor } from "../contexts/EditorContext";
 import { BackgroundPicker } from "./BackgroundPicker";
@@ -248,7 +248,7 @@ const SwitchItem = ({
         onClick={() => onChange(!value)}
       >
         <div
-          className={classNames(
+          className={clsx(
             "absolute h-5 w-5 rounded-full top-1 transition-all",
             {
               "left-1 bg-white/30": !value,

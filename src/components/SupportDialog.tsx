@@ -29,10 +29,12 @@ const SupportDialog = () => {
           <h2 className="text-2xl font-bold my-6">Hi, There 👋</h2>
           <p className="my-4">
             I&apos;m{" "}
-            <Link href="https://rohid.dev">
-              <a className="font-medium" target="_blank">
-                Rohid
-              </a>
+            <Link
+              className="font-medium"
+              target="_blank"
+              href="https://rohid.dev"
+            >
+              Rohid
             </Link>{" "}
             ✌️. Creator of <b>CodeToImg</b>. I&apos;m an indie full-stack
             freelance developer living in Bangladesh 🇧🇩. I make software and

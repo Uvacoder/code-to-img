@@ -7,25 +7,25 @@ const Header = () => {
   return (
     <div className="w-full py-4 flex items-center px-4 gap-4">
       <div className="inline-flex gap-6 items-center">
-        <Link href="/">
-          <a className="flex gap-2 items-center">
-            <img
-              src="/icons/svg-icon.svg"
-              alt="CodeToImg Logo"
-              className="w-9 h-9"
-            />
-            <p>
-              <span className="font-bold text-xl text-white">CodeToImg</span>
-              <span className="text-xs ml-1">v1.3.0</span>
-            </p>
-          </a>
+        <Link className="flex gap-2 items-center" href="/">
+          <img
+            src="/icons/svg-icon.svg"
+            alt="CodeToImg Logo"
+            className="w-9 h-9"
+          />
+          <p>
+            <span className="font-bold text-xl text-white">CodeToImg</span>
+            <span className="text-xs ml-1">v1.3.0</span>
+          </p>
         </Link>
         <p className="text-gray-300">
           by{" "}
-          <Link href="https://rohid.dev">
-            <a target="_blank" className="hover:text-gray-50">
-              Rohid
-            </a>
+          <Link
+            target="_blank"
+            className="hover:text-gray-50"
+            href="https://rohid.dev"
+          >
+            Rohid
           </Link>
         </p>
       </div>

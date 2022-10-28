@@ -1,3 +1,4 @@
+"use client";
 import {
   createContext,
   ReactNode,
@@ -9,12 +10,13 @@ import {
 } from "react";
 import { toPng, toJpeg, toSvg, toBlob } from "html-to-image";
 import { Options } from "html-to-image/lib/types";
-import { useRouter } from "next/router";
 import { useAtom } from "jotai";
 import { AppState, appStateAtom, initAppState } from "../stores/appState";
 import { exportSettingsAtom } from "../stores/exportSettings";
 import * as gtag from "../lib/gtag";
 import { useSupportDialog } from "./SupportDialogContext";
+import { useRouter } from "next/navigation";
+import { useSearchParams } from "next/navigation";
 
 export type EditorContextType = {
   canvasRef: React.RefObject<HTMLDivElement>;
@@ -31,6 +33,7 @@ export const EditorProvider = ({ children }: { children: ReactNode }) => {
   const [settings, setSettings] = useAtom(appStateAtom);
   const [exportSettings] = useAtom(exportSettingsAtom);
   const { openSupportDialog } = useSupportDialog();
+  const searchParams = useSearchParams();
 
   const router = useRouter();
 
@@ -64,14 +67,6 @@ export const EditorProvider = ({ children }: { children: ReactNode }) => {
   useEffect(() => {
     getSettings();
   }, [getSettings]);
-
-  useEffect(() => {
-    if (isLoading) return;
-    router.replace({
-      query: settings,
-    });
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [settings, isLoading]);
 
   const canvasRef = useRef<HTMLDivElement>(null);
 
