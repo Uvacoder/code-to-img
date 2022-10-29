@@ -1,5 +1,12 @@
+import Link from "next/link";
+import Header from "./header";
+
 const Home = () => {
-  return <div>Home</div>;
+  return (
+    <div>
+      <Header />
+    </div>
+  );
 };
 
 export default Home;
