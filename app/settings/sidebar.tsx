@@ -2,7 +2,7 @@
 
 import { useRouter, useSelectedLayoutSegments } from "next/navigation";
 import { useEffect } from "react";
-import SidebarLink from "./sidebar-link";
+import SidebarLink from "./SidebarLink";
 
 export default function Sidebar() {
   const segments = useSelectedLayoutSegments();

@@ -1,4 +1,4 @@
-import Header from "app/header";
+import Header from "app/Header";
 import { FC, PropsWithChildren } from "react";
 
 const Layout: FC<PropsWithChildren> = ({ children }) => {

@@ -5,7 +5,7 @@ import { User } from "firebase/auth";
 import { auth } from "libs/firebase";
 import { useCallback } from "react";
 
-const UserDropdownButton = ({ user }: { user: User }) => {
+const UserDropdown = ({ user }: { user: User }) => {
   const handleLogOut = useCallback(async () => {
     try {
       await auth.signOut();
@@ -25,4 +25,4 @@ const UserDropdownButton = ({ user }: { user: User }) => {
   );
 };
 
-export default UserDropdownButton;
+export default UserDropdown;

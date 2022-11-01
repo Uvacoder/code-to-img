@@ -2,8 +2,8 @@
 
 import { useAuth } from "contexts/auth-context";
 import { useRouter } from "next/navigation";
-import { FC, Fragment, PropsWithChildren } from "react";
-import Spinner from "ui/spinner";
+import { FC, PropsWithChildren } from "react";
+import Spinner from "ui/Spinner";
 
 const AuthGuard: FC<PropsWithChildren> = ({ children }) => {
   const { user, isLoading, error } = useAuth();

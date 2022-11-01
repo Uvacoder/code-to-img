@@ -1,11 +1,10 @@
-import Link from "next/link";
-import Header from "./header";
+import Header from "./Header";
 
 const Home = () => {
   return (
-    <div>
+    <>
       <Header />
-    </div>
+    </>
   );
 };
 

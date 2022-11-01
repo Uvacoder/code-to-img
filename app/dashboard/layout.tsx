@@ -1,6 +1,6 @@
-import AuthGuard from "guards/auth-guard";
+import AuthGuard from "guards/AuthGuard";
 import { PropsWithChildren } from "react";
-import Header from "./header";
+import Header from "./Header";
 
 export default function Layout({ children }: PropsWithChildren) {
   return (

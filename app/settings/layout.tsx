@@ -1,8 +1,7 @@
-import Header from "app/dashboard/header";
-import AuthGuard from "guards/auth-guard";
-import { useSelectedLayoutSegment } from "next/navigation";
+import Header from "app/dashboard/Header";
+import AuthGuard from "guards/AuthGuard";
 import { PropsWithChildren } from "react";
-import Sidebar from "./sidebar";
+import Sidebar from "./Sidebar";
 
 export default function Layout({ children }: PropsWithChildren) {
   return (

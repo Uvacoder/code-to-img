@@ -5,7 +5,7 @@ import { auth } from "libs/firebase";
 import Image from "next/image";
 import Link from "next/link";
 import { useCallback } from "react";
-import UserDropdownButton from "ui/user-dropdown-button";
+import UserDropdown from "ui/UserDropdown";
 
 export default function Header() {
   const { user, isLoading } = useAuth();
@@ -63,7 +63,7 @@ export default function Header() {
             >
               Dashboard
             </Link>
-            <UserDropdownButton user={user} />
+            <UserDropdown user={user} />
           </div>
         ) : (
           <Link href="/login">Log In</Link>

@@ -3,7 +3,7 @@
 import { useAuth } from "contexts/auth-context";
 import { useRouter } from "next/navigation";
 import { PropsWithChildren } from "react";
-import Spinner from "ui/spinner";
+import Spinner from "ui/Spinner";
 
 export default function Layout({ children }: PropsWithChildren) {
   const { error, isLoading, user } = useAuth();
